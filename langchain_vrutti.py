@@ -17,8 +17,8 @@ st.title("✅ What's TRUE  : Using LangChain `SimpleSequentialChain`")
 st.markdown("Inspired from [fact-checker](https://github.com/jagilley/fact-checker) by Jagiley")
 
 # If an API key has been provided, create an OpenAI language model instance
-API = ' '
-if API = ' ':
+
+if API:
     llm = OpenAI(temperature=0.7, openai_api_key=API)
 else:
     # If an API key hasn't been provided, display a warning message
