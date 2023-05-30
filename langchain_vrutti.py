@@ -20,7 +20,7 @@ st.markdown("Inspired from [fact-checker](https://github.com/jagilley/fact-check
 
 try:
     llm = OpenAI(temperature=0.7, openai_api_key=API)
-catch:
+except:
     # If an API key hasn't been provided, display a warning message
     st.warning("Enter your OPENAI API-KEY. Get your OpenAI API key from [here](https://platform.openai.com/account/api-keys).\n")
 
