@@ -17,15 +17,19 @@ st.title("✅ What's TRUE  : Using LangChain `SimpleSequentialChain`")
 st.markdown("Inspired from [fact-checker](https://github.com/jagilley/fact-checker) by Jagiley")
 
 # If an API key has been provided, create an OpenAI language model instance
-
-try:
+API = st.text_input("API : " , placeholder = "Please input API")
+# try:
+#     llm = OpenAI(temperature=0.7, openai_api_key=API)
+# except:
+#     # If an API key hasn't been provided, display a warning message
+    
+#     llm = OpenAI(temperature=0.7, openai_api_key=API)
+#     st.warning("Enter your OPENAI API-KEY. Get your OpenAI API key from [here](https://platform.openai.com/account/api-keys).\n")
+if API:
     llm = OpenAI(temperature=0.7, openai_api_key=API)
-except:
+else:
     # If an API key hasn't been provided, display a warning message
-    API = st.text_input("API : " , placeholder = "Please input API")
-    llm = OpenAI(temperature=0.7, openai_api_key=API)
     st.warning("Enter your OPENAI API-KEY. Get your OpenAI API key from [here](https://platform.openai.com/account/api-keys).\n")
-
 # Add a text input box for the user's question
 user_question = st.text_input(
     "Enter Your Question : ",
