@@ -14,21 +14,16 @@ from langchain.prompts import PromptTemplate # import PromptTemplate
 st.title("✅ What's TRUE  : Using LangChain `SimpleSequentialChain`")
 
 # Add a link to the Github repository that inspired this app
-st.markdown("Inspired from [fact-checker](https://github.com/jagilley/fact-checker) by Jagiley")
+st.markdown("Created by [Vrutti Tanna](https://www.datascienceprophet.com/)")
 
 # If an API key has been provided, create an OpenAI language model instance
-API = st.text_input("API : " , placeholder = "Please input API")
-# try:
-#     llm = OpenAI(temperature=0.7, openai_api_key=API)
-# except:
-#     # If an API key hasn't been provided, display a warning message
-    
-#     llm = OpenAI(temperature=0.7, openai_api_key=API)
-#     st.warning("Enter your OPENAI API-KEY. Get your OpenAI API key from [here](https://platform.openai.com/account/api-keys).\n")
+API = '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'
+
 if API:
     llm = OpenAI(temperature=0.7, openai_api_key=API)
 else:
     # If an API key hasn't been provided, display a warning message
+    API = st.text_input("API : " , placeholder = "Please input API")
     st.warning("Enter your OPENAI API-KEY. Get your OpenAI API key from [here](https://platform.openai.com/account/api-keys).\n")
 # Add a text input box for the user's question
 user_question = st.text_input(
