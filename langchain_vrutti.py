@@ -11,7 +11,7 @@ from langchain.llms import OpenAI # import OpenAI model
 from langchain.prompts import PromptTemplate # import PromptTemplate
 
 # Set the title of the Streamlit app
-st.title("✅ What's TRUE  : Using LangChain `SimpleSequentialChain`")
+st.title("✅ Demo App : Using LangChain `SimpleSequentialChain`")
 
 # Add a link to the Github repository that inspired this app
 st.markdown("Created by [Vrutti Tanna](https://www.datascienceprophet.com/)")
