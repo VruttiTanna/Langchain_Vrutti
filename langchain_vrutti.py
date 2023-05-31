@@ -17,13 +17,12 @@ st.title("✅ What's TRUE  : Using LangChain `SimpleSequentialChain`")
 st.markdown("Created by [Vrutti Tanna](https://www.datascienceprophet.com/)")
 
 # If an API key has been provided, create an OpenAI language model instance
-API = "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"
-
+API = st.text_input("API : " , placeholder = "Please input API")
 if API:
     llm = OpenAI(temperature=0.7, openai_api_key=API)
 else:
     # If an API key hasn't been provided, display a warning message
-    API = st.text_input("API : " , placeholder = "Please input API")
+    
     st.warning("Enter your OPENAI API-KEY. Get your OpenAI API key from [here](https://platform.openai.com/account/api-keys).\n")
 # Add a text input box for the user's question
 user_question = st.text_input(
