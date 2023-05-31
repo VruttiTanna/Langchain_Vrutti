@@ -17,7 +17,7 @@ st.title("✅ What's TRUE  : Using LangChain `SimpleSequentialChain`")
 st.markdown("Created by [Vrutti Tanna](https://www.datascienceprophet.com/)")
 
 # If an API key has been provided, create an OpenAI language model instance
-API = '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'
+API = "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"
 
 if API:
     llm = OpenAI(temperature=0.7, openai_api_key=API)
