@@ -32,7 +32,6 @@ user_question = st.text_input(
 
 # Generating the final answer to the user's question using all the chains
 with st.spinner('Wait for it...'):
-    time.sleep(5)
     if st.button("Tell me about it", type="primary"):
         # Chain 1: Generating a rephrased version of the user's question
         template = """{question}\n\n"""
